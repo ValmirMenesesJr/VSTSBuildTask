@@ -1,0 +1,49 @@
+﻿{
+  "id": "beef8e60-6aeb-4c40-ade5-299a95d939dd",
+  "name": "ExampleTask",
+  "friendlyName": "<<Your task's friendly name>>",
+  "description": "<<Your task description>>",
+  "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
+  "category": "Utility",
+  "visibility": [
+    "Build", 
+    "Release"
+  ],
+  "author": "",
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "demands": [
+  ],
+  "minimumAgentVersion": "1.83.0",
+  "groups": [
+
+  ],
+  "inputs": [
+    {
+      "name": "variable1",
+      "type": "filePath",
+      "label": "Path to Solution File",
+      "defaultValue": "",
+      "required": true
+    },
+    {
+      "name": "variable2",
+      "type": "string",
+      "label": "Sample text variable",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "This will give you a hover-over tooltip"
+    }
+  ],
+  "instanceNameFormat": "ExampleTask",
+  "execution": {
+    "PowerShell3": {
+      "target": "$(currentDirectory)\\task.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}
